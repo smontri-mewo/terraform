@@ -49,3 +49,15 @@ resource "azurerm_virtual_machine" "mewo-vm" {
       project     = "${var.project}"
   }
 }
+
+output "vm name" {
+  value = azurerm_virtual_machine.mewo-vm.name
+}
+
+output "vm user" {
+  value = azurerm_virtual_machine.mewo-vm.os_profile.admin_username
+}
+
+output "vm ip" {
+  value = azurerm_virtual_machine.mewo-vm.os_profile.ip_address
+}
