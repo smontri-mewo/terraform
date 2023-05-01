@@ -49,7 +49,6 @@ resource "azurerm_virtual_machine" "mewo-vm" {
       project     = "${var.project}"
   }
 }
-
 output "vm_name" {
   value = azurerm_virtual_machine.mewo-vm.name
 }
