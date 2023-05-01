@@ -50,14 +50,14 @@ resource "azurerm_virtual_machine" "mewo-vm" {
   }
 }
 
-output "vm name" {
+output "vm_name" {
   value = azurerm_virtual_machine.mewo-vm.name
 }
 
-output "vm user" {
+output "vm_user" {
   value = azurerm_virtual_machine.mewo-vm.os_profile.admin_username
 }
 
-output "vm ip" {
+output "vm_ip" {
   value = azurerm_virtual_machine.mewo-vm.os_profile.ip_address
 }
