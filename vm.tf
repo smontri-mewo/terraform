@@ -1,4 +1,5 @@
 # Virtual Machine
+# une modification
 resource "azurerm_virtual_machine" "mewo-vm" {
   name                  = "${var.prefix}-vm"
   location              = azurerm_resource_group.mewo-rg.location
