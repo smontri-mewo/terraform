@@ -3,7 +3,7 @@ name: Terraform Check
 on:
   pull_request:
     branches: [ "*" ]
-    
+
 permissions:
       id-token: write
       contents: read
@@ -32,3 +32,12 @@ jobs:
         
       - name: Build plan
         run: terraform plan
+
+      - name: Apply
+        run: terraform apply
+
+      - name: Get ip
+        run: terraform refresh
+      
+      - name: Destroy
+        run: terraform destroy
