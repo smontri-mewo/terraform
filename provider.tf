@@ -7,8 +7,8 @@ provider "azurerm" {
 terraform {
   backend "azurerm" {
   resource_group_name = "tfstate"
-  storage_account_name = "tfstate29638"
+  storage_account_name = "tfstatebehr"
   container_name = "tfstate"
-  key = "test.terraform.tfstate"
+  key = "malob.terraform.tfstate"
   }
 }
