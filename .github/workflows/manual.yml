@@ -20,6 +20,14 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  init:
+  # This job init terraform environment
+    runs-on: hashicorp/terraform:latest
+
+    # Steps
+    steps:
+    - name: TF init
+      run: terraform init
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
