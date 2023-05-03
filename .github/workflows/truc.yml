@@ -8,6 +8,10 @@ jobs:
   jsp:
     runs-on: hashicorp/terraform:latest
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - name: Validate code
         run: terraform validate
 
