@@ -35,6 +35,8 @@ jobs:
 
       - name: Apply
         run: terraform apply -auto-approve
+        env:
+          TF_VAR_ssh_key: ${{ secrets.AZURE_SSH_KEY }}
 
       - name: Get ip
         run: terraform refresh
