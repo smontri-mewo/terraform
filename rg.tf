@@ -4,9 +4,9 @@ resource "azurerm_resource_group" "mewo-rg" {
   location = "North Europe"
 
   tags = {
-      environment = "${var.environment}"
-      owner       = "${var.prefix}"
-      label       = "Resource Group"
-      project     = "${var.project}"
+    environment = "${var.environment}"
+    owner       = "${var.prefix}"
+    label       = "Resource Group"
+    project     = "${var.project}"
   }
 }

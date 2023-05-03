@@ -30,24 +30,24 @@ resource "azurerm_virtual_machine" "mewo-vm" {
   os_profile {
     computer_name  = "mewo-vm01"
     admin_username = "mewo-user"
-   # admin_password = "Password1234!"
+    # admin_password = "Password1234!"
   }
 
   os_profile_linux_config {
-   # disable_password_authentication = false
-     disable_password_authentication = true
-     ssh_keys {
-      path     = "/home/mewo-user/.ssh/authorized_keys"
+    # disable_password_authentication = false
+    disable_password_authentication = true
+    ssh_keys {
+      path = "/home/mewo-user/.ssh/authorized_keys"
       # votre clé SSH publique
-      key_data = "${var.ssh_key}"
-     }
+      key_data = var.ssh_key
+    }
   }
 
   tags = {
-      environment = "${var.environment}"
-      owner       = "${var.prefix}"
-      label       = "Virtual Machine"
-      project     = "${var.project}"
+    environment = "${var.environment}"
+    owner       = "${var.prefix}"
+    label       = "Virtual Machine"
+    project     = "${var.project}"
   }
 }
 output "vm_name" {
