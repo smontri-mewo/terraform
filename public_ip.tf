@@ -1,6 +1,6 @@
 # Public IPs
 resource "azurerm_public_ip" "mewo-ip" {
-  name                = "smontri-ip"
+  name                = "${var.prefix}-ip"
   location            = azurerm_resource_group.mewo-rg.location
   resource_group_name = azurerm_resource_group.mewo-rg.name
   allocation_method   = "Dynamic"
