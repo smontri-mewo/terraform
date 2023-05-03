@@ -5,7 +5,7 @@ on:
     branches: [ "*" ]
 
 jobs:
-  lint:
+  jsp:
     runs-on: hashicorp/terraform:latest
     steps:
       - name: Validate code
