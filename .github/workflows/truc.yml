@@ -1,0 +1,16 @@
+name: Terraform Check
+
+on:
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  lint:
+    runs-on: hashicorp/terraform:latest
+    steps:
+      - name: Validate code
+        run: terraform validate
+
+        
+      - name: Build plan
+        run: terraform plan
